@@ -137,7 +137,7 @@
   width: 50%;
   height: max-content;
   text-align: left;
-  margin-top: 25px;
+  margin-top: 45px;
 }
 
 .text-hero h1 {
@@ -257,17 +257,28 @@
   .hero {
     padding: 40px;
     min-height: 80vh;
+    margin-top: 0;
     
   }
 
   .text-hero {
+    display: flex;
     width: 100%;
+    margin-top: 80px;
+    
+  }
+  .hero .text-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .text-hero h1 {
-    font-size: 1.5rem; /* Ajustado para que no sea tan pequeño como 1.2rem */
+    font-size: 2rem; /* Ajustado para que no sea tan pequeño como 1.2rem */
   }
-
+  .text-hero p {
+    font-size: 1rem;
+  }
   .boton-hero {
     flex-direction: column-reverse; 
     align-items: flex-start;
@@ -277,6 +288,7 @@
     width: 100%; 
     max-width: 250px;
     box-sizing: border-box;
+    padding: 15px 40px 15px 40px;
   }
 }
 
