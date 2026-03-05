@@ -497,7 +497,7 @@
 
   /* Espacio extra entre Título y Párrafo en móvil */
   .contenido-about h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 30px;
   }
 
@@ -511,5 +511,6 @@
     text-align: left; /* Mantenemos la lista alineada a la izquierda para lectura */
     width: 100%;
     max-width: 450px; /* Para que no se vea muy estirada en tablets */
+    margin-top: 40px;
   }
 }
