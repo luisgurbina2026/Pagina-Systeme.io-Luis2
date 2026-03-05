@@ -385,3 +385,131 @@
     width: 100%;
   }
 }
+
+/* --- About me --- */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  margin-top: 50px;
+  gap: 80px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animación de entrada */
+@keyframes entradaSuave {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  /* Estado inicial para que la animación se vea */
+  opacity: 0;
+  animation: entradaSuave 1.2s ease-out forwards;
+}
+
+.about .contenido-about {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  color: #ccc;
+}
+
+.contenido-about h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+/* Párrafo introductorio (Escritorio) */
+.contenido-about > p {
+  line-height: 1.6;
+  margin-bottom: 35px; /* Espacio base */
+  font-size: 1.05rem;
+}
+
+/* Lista de Iconos */
+.lista-about {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-about li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.icono-naranja {
+  color: #ff8c00;
+  font-size: 1.3rem;
+  margin-right: 15px;
+  margin-top: 4px;
+}
+
+.contenido-item strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.contenido-item p {
+  color: #a0a0a0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- OPTIMIZACIÓN PARA CELULARES (RESPONSIVE) --- */
+@media (max-width: 968px) {
+  .about {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .about img {
+    max-width: 90%;
+    transform: none; /* Evitamos desplazamientos laterales en móvil */
+  }
+
+  .about .contenido-about {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  /* Espacio extra entre Título y Párrafo en móvil */
+  .contenido-about h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  /* AJUSTE SOLICITADO: Espacio entre Párrafo y la Lista en móvil */
+  .contenido-about > p {
+    margin-bottom: 50px; /* Aumentado para que no choque con la lista */
+    font-size: 1rem;
+  }
+
+  .lista-about li {
+    text-align: left; /* Mantenemos la lista alineada a la izquierda para lectura */
+    width: 100%;
+    max-width: 450px; /* Para que no se vea muy estirada en tablets */
+  }
+}
